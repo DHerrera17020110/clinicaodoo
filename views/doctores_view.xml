@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo escolares.profesores -->	
+		<record model="ir.ui.view" id="doctores_form">
+		<field name="name">clinica.doctores.form</field>
+		<field name="model">clinica.doctores</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<form>
+            <sheet>
+                <group string="Datos de los doctores">
+                    <field name="name" placeholder="Nombre del Doctor" />
+                    <field name="id_doctor" placeholder="Cedula Profecional"/>
+					 <field name="especialidad" placeholder="Especialidad"/>
+                    <field name="direccion" placeholder="Dirección"/>
+                    <field name="telefono" placeholder="Teléfono"/>							
+                    <field name="sexo" placeholder="Sexo"/>
+                    <field name="edad" placeholder="Edad"/>
+					<field name="horario_id" placeholder="Horarios"/>
+					<field name="email" placeholder="Correo electrónico"/>
+                </group>
+            </sheet>
+		</form>
+        </field>
+		</record>
+
+        <!-- vista tipo tree del modelo escolares.profesores -->	
+		<record model="ir.ui.view" id="clinica_doctores_tree">
+			<field name="name">clinica.doctores.tree</field>
+			<field name="model">clinica.doctores</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Doctores" >
+						<field name="name" />
+						<field name="id_doctor" />
+						<field name="especialidad"/>
+						<field name="direccion"/>
+						<field name="telefono" />
+						<field name="sexo" />
+						<field name="edad" />
+						<field name="horario_id"/>
+						<field name="email"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="clinica_doctores_search">
+			<field name="name">clinica.doctores.search</field>
+			<field name="model">clinica.doctores</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+					<field name="id_doctor" />
+					<field name="especialidad"/>
+					<field name="direccion"/>
+					<field name="telefono" />
+					<field name="sexo" />
+					<field name="edad" />						
+					<field name="horario_id"/>
+					<field name="email"/>
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO escolares.profesores -->	
+		<record id="clinica_doctores_action" model="ir.actions.act_window">
+			<field name="name">Doctores</field>
+			<field name="res_model">clinica.doctores</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+</odoo>

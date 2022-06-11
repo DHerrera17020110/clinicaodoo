@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="medicamentos_form">
+		<field name="name">clinica.medicamentos.form</field>
+		<field name="model">clinica.medicamentos</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<form>
+            <sheet>
+                <group string="Datos de los medicamentos">
+                    <field name="name" placeholder="Nombre de Medicamento" />
+                    <field name="med_id" placeholder="clave_Medicamento"/>
+                    <field name="laboratorio" placeholder="Laboratorio"/>
+                    <field name="cantidad" placeholder="Cantdad"/>							
+					<field name="dosis" placeholder="dosis"/>
+                </group>
+            </sheet>
+		</form>
+        </field>
+		</record>
+
+        <!-- vista tipo tree del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="clinica_medicamentos_tree">
+			<field name="name">clinica.medicamentos.tree</field>
+			<field name="model">clinica.medicamentos</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="medicamentos" >
+						<field name="name" />
+						<field name="med_id" />
+						<field name="laboratorio"/>
+						<field name="cantidad" />
+						<field name="dosis" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="clinica_medicamentos_search">
+			<field name="name">clinica.medicamentos.search</field>
+			<field name="model">clinica.medicamentos</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+						<field name="med_id" />
+						<field name="laboratorio"/>
+						<field name="cantidad" />
+						<field name="dosis" />
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO escolares.alumnos -->	
+		<record id="clinica_medicamentos_action" model="ir.actions.act_window">
+			<field name="name">medicamentos</field>
+			<field name="res_model">clinica.medicamentos</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+	<report id="receta_id" model="clinica.medicamentos"
+		string="receta" report_type="qweb-pdf" name="clinica.receta"
+		attachment_use="False"/> 
+
+</odoo>

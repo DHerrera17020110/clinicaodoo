@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <!-- vista tipo tree del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="clinica_horarios_tree">
+			<field name="name">clinica.horarios.tree</field>
+			<field name="model">clinica.horarios</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="horarios" editable="top">
+					<field name="name" />
+                    <field name="doctor" />
+					<field name="id_horario" />
+					<field name="numconsult" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="clinica_horarios_search">
+			<field name="name">clinica.horarios.search</field>
+			<field name="model">clinica.horarios</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+					<field name="doctor" />
+                    <field name="id_horario" />
+					<field name="numconsult" />
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO escolares.alumnos -->	
+		<record id="clinica_horarios_action" model="ir.actions.act_window">
+			<field name="name">horarios</field>
+			<field name="res_model">clinica.horarios</field>
+			<field name="view_mode">tree</field>
+		</record>
+
+
+</odoo>

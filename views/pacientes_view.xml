@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="pacientes_form">
+		<field name="name">clinica.pacientes.form</field>
+		<field name="model">clinica.pacientes</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<form>
+            <sheet>
+                <group string="Datos del paciente">
+                    <field name="name" placeholder="Nombre del Paciente" />
+                    <field name="id_paciente" placeholder="Clave paciente"/>
+                    <field name="direccion" placeholder="Dirección"/>
+                    <field name="telefono" placeholder="Teléfono"/>							
+					<field name="email" placeholder="Correo electrónico"/>
+					<field name="blood" placeholder="Tipo de Sangre"/>
+                    <field name="sexo" placeholder="Sexo"/>
+                    <field name="edad" placeholder="Edad"/>
+					<field name="alergias" placeholder="Enfermedades Cronicas / Alergias"/>
+					<field name="afiliacion" placeholder="Afiliado?"/>
+					<field name="fnacimiento" placeholder="Fecha de Nacimiento"/>
+                </group>
+            </sheet>
+		</form>
+        </field>
+		</record>
+
+        <!-- vista tipo tree del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="clinica_pacientes_tree">
+			<field name="name">clinica.pacientes.tree</field>
+			<field name="model">clinica.pacientes</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Pacientes" >
+						<field name="name" />
+						<field name="id_paciente" />
+						<field name="direccion"/>
+						<field name="telefono" />
+						<field name="email" />
+						<field name="blood" />
+						<field name="sexo" />
+						<field name="edad" />
+						<field name="alergias" />
+						<field name="afiliacion" />
+						<field name="fnacimiento" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="clinica_pacientes_search">
+			<field name="name">clinica.pacientes.search</field>
+			<field name="model">clinica.pacientes</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+						<field name="id_paciente" />
+						<field name="direccion"/>
+						<field name="telefono" />
+						<field name="email" />
+						<field name="blood" />
+						<field name="sexo" />
+						<field name="edad" />
+						<field name="alergias" />
+						<field name="afiliacion" />
+						<field name="fnacimiento" />
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO escolares.alumnos -->	
+		<record id="clinica_pacientes_action" model="ir.actions.act_window">
+			<field name="name">pacientes</field>
+			<field name="res_model">clinica.pacientes</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+	
+
+</odoo>

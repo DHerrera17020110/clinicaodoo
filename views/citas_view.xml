@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo escolares.inscripciones -->	
+		<record model="ir.ui.view" id="inscripciones_form">
+		<field name="name">clinica.citas.form</field>
+		<field name="model">clinica.citas</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<form>
+            <sheet>
+                <group string="Datos de la cita">
+                    <field name="ide" placeholder="id" />
+                    <field name="fecha" placeholder="fecha"/>
+                    <field name="paciente" placeholder="paciente"/>
+                    <field name="doctor" placeholder="doctor"/>							
+                    <field name="motvcita" placeholder="motivocita"/>
+					<field name="tratamiento" placeholder="tratamiento"/>
+					<field name="descripcion" placeholder="descripcion de tratamiento"/>
+                    <field name="horario" placeholder="Horario"/>
+                </group>
+            </sheet>
+		</form>
+        </field>
+		</record>
+
+        <!-- vista tipo tree del modelo escolares.inscripciones -->	
+		<record model="ir.ui.view" id="clinica_citas_tree">
+			<field name="name">clinica.citas.tree</field>
+			<field name="model">clinica.citas</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="citas" >
+                    <field name="ide"  />
+                    <field name="fecha" />
+                    <field name="paciente" />
+                    <field name="doctor" />							
+                    <field name="motvcita" />
+                    <field name="tratamiento" />
+					<field name="descripcion" />
+					<field name="horario" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="clinica_citas_search">
+			<field name="name">clinica.citas.search</field>
+			<field name="model">clinica.citas</field>
+			<field name="arch" type="xml">
+				<search>
+                   <field name="ide"  />
+                    <field name="fecha" />
+                    <field name="paciente" />
+                    <field name="doctor" />							
+                    <field name="motvcita" />
+                    <field name="tratamiento" />
+ 					<field name="descripcion" />
+					<field name="horario" />
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO escolares.inscripciones -->	
+		<record id="clinica_citas_action" model="ir.actions.act_window">
+			<field name="name">citas</field>
+			<field name="res_model">clinica.citas</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+<report id="recetax_id" model="clinica.citas"
+		string="Receta" report_type="qweb-pdf" name="clinica.receta"
+		attachment_use="False"/> 
+</odoo>

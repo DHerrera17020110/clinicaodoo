@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<menuitem name="Clinica" id="clinica_menu" sequence="20" />
+			<menuitem name="Catalagos" id="clinica_catalogos_menu" parent="clinica_menu" sequence="10"/>
+			<menuitem name="Pacientes" action="clinica_pacientes_action"  id="clinica_pacientes_menu" sequence="10" parent="clinica_catalogos_menu" />
+				<menuitem name="Doctores" action="clinica_doctores_action"  id="clinica_doctores_menu" sequence="20" parent="clinica_catalogos_menu" />
+				<menuitem name="Medicamentos" action="clinica_medicamentos_action"  id="clinica_medicamentos_menu" sequence="20" parent="clinica_catalogos_menu" />
+
+						
+			<menuitem name="Procesos" id="clinica_procesos_menu" parent="clinica_menu" sequence="20"/>
+				<menuitem name="Horarios" action="clinica_horarios_action" id="clinica_horarios_menu" sequence="10" parent="clinica_procesos_menu" />
+				<menuitem name="Citas" action="clinica_citas_action" id="clinica_citas_menu" sequence="20" parent="clinica_procesos_menu" />
+				
+	</data>
+</odoo>

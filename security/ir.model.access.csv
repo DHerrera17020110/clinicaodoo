@@ -1,0 +1,12 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+admin_doctores_1,admin_doctores,model_clinica_doctores,clinica_admin,1,1,1,1
+admin_pacientes_1,admin_pacientes,model_clinica_pacientes,clinica_admin,1,1,1,1
+admin_medicamentos_1,admin_medicamentos,model_clinica_medicamentos,clinica_admin,1,1,1,1
+admin_horarios_1,admin_horarios,model_clinica_horarios,clinica_admin,1,1,1,1
+admin_citas_1,admin_citas,model_clinica_citas,clinica_admin,1,1,1,1
+
+doctores_doctores_1,doctores_doctores,model_clinica_doctores,clinica_doctores,1,1,1,1
+doctores_pacientes_1,doctores_pacientes,model_clinica_pacientes,clinica_doctores,1,1,1,1
+doctores_medicamentos_1,doctores_medicamentos,model_clinica_medicamentos,clinica_doctores,1,1,1,1
+doctores_horarios_1,doctores_horarios,model_clinica_horarios,clinica_doctores,1,1,1,1
+doctores_citas_1,doctores_citas,model_clinica_citas,clinica_doctores,1,1,1,1

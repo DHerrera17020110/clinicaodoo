@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="clinica_id" model="ir.module.category">
+            <field name="name">Administracion Clinica</field>
+        </record>
+        <record id="clinica_doctores" model="res.groups">
+            <field name="name">Doctores</field>
+            <field name="category_id" ref="clinica_id"/>
+        </record>
+        <record id="clinica_admin" model="res.groups">
+            <field name="name">Administrador</field>
+            <field name="category_id" ref="clinica_id"/>
+        </record>
+    </data>
+</odoo>

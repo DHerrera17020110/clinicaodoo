@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Custom report. -->
+<odoo>
+	<template id="receta">
+		<t t-call="web.html_container">
+			<div class="header"  style="font-size:20px">
+				<table width="100%" style="border: 1px black solid">
+	<tr>
+       <td> <strong>         |°°Clinica de Especialidad°°| </strong> </td>
+	                 <td> <strong>  ♥ EL REY DAVID ♥ </strong> </td>
+	</tr>
+			  </table>
+			</div>
+
+			<div class="page" style="font-size:10px">
+					<t t-foreach="docs" t-as="o">
+					<table width="100%" style="border: 2px black solid">
+					<tr>
+								<td width="10%"> <strong> Clave de Cita: </strong> </td>
+								<td width="40%"> <i> <t t-esc="o.ide" /> </i> </td>
+								<td width="10%"> <strong> Fecha: </strong> </td>
+								<td width="40%"> <i> <t t-esc="o.fecha" /> </i> </td>
+							</tr>
+					</table>
+					<table width="100%" style="border: 2px black solid">
+					<tr>
+								<td width="10%"> <strong> Nombre Doctor: </strong> </td>
+								<td width="40%"> <i> <t t-esc="o.doctor.name" /> </i> </td>
+								<td width="10%"><strong> Motivo de Cita: </strong></td>
+								<td width="40%"> <i> <t t-esc="o.motvcita" /> </i> </td>
+							</tr>
+					</table>
+						<table width="100%" style="border: 1px black solid">
+							<tr>
+								<td width="10%"><strong> Hora de Cita: </strong> </td>
+								<td width="40%"> <i> <t t-esc="o.horario.name" /> </i> </td>
+								<td width="10%"> <strong> Nombre Paciente: </strong> </td>
+								<td width="40%"> <h3> <t t-esc="o.paciente.name" /> </h3> </td>
+							</tr>
+							<tr>
+								<td width="10%"> <strong> Medicamento: </strong> </td>
+								<td width="40%"> <i> <t t-esc="o.tratamiento.name" /> </i> </td>
+								<td width="10%"> <strong> Descripcion Tratamiento: </strong> </td>
+								<td width="40%"> <u> <t t-esc="o.descripcion" /></u> </td>
+							</tr>
+						</table>	
+					</t>
+			</div>
+			<div class="footer"  style="font-size:20px">
+			<table width="100%" style="border: 1px black solid">
+				<tr>
+       <td> <strong>         |°°Clinica de Especialidad°°| </strong> </td>
+	                 <td> <strong>  ♥ EL REY DAVID ♥ </strong> </td>
+	</tr>
+			</table>
+			</div>
+		</t>
+		</template>
+</odoo>
